@@ -11,13 +11,13 @@ namespace AutoCenter.Repository
 { 
     public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
-        private readonly AutoCenterDbContext _db;
-        private readonly DbSet<TEntity> _dbSet;
+        protected readonly AutoCenterDbContext _db;
+        protected readonly DbSet<TEntity> _dbSet;
 
-        public RepositoryBase(AutoCenterDbContext db)
+        public RepositoryBase()
         {
-            _db = db;
-            _dbSet = db.Set<TEntity>();
+            _db = new AutoCenterDbContext();
+            _dbSet = _db.Set<TEntity>();
         }
 
         public virtual bool Create(TEntity entity)

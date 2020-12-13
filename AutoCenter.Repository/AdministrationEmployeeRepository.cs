@@ -8,8 +8,6 @@ namespace AutoCenter.Repository
 {
     public class AdministrationEmployeeRepository : RepositoryBase<AdministrationEmployee>
     {
-        public AdministrationEmployeeRepository(AutoCenterDbContext db) : base(db)
-        {
-        }
+       
     }
 }

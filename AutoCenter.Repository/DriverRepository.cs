@@ -7,8 +7,6 @@ namespace AutoCenter.Repository
 {
     public class DriverRepository : RepositoryBase<Driver>
     {
-        public DriverRepository(AutoCenterDbContext db) : base(db)
-        {
-        }
+       
     }
 }

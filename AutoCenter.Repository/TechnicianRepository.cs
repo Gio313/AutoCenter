@@ -7,8 +7,6 @@ namespace AutoCenter.Repository
 {
     public class TechnicianRepository : RepositoryBase<Technician>
     {
-        public TechnicianRepository(AutoCenterDbContext db) : base(db)
-        {
-        }
+   
     }
 }
