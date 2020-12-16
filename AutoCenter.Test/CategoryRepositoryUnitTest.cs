@@ -1,4 +1,5 @@
-﻿using AutoCenter.Repository;
+﻿using AutoCenter.Domain.Models;
+using AutoCenter.Repository;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,11 @@ using Xunit;
 
 namespace AutoCenter.Test
 {
-    public class CategoryRepositoryUnitTest
+    public class CategoryRepositoryUnitTest : RepositoryBase<Category>
     {
-        
+        public CategoryRepositoryUnitTest() : base(new CategoryRepository())
+        {
+
+        }
     }
 }

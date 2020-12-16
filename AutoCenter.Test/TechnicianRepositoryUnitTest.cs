@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AutoCenter.Domain.Interfaces.Repositories;
+using AutoCenter.Domain.Models;
+using AutoCenter.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +9,24 @@ using System.Threading.Tasks;
 
 namespace AutoCenter.Test
 {
-    public class TechnicianRepositoryUnitTest
-    {
+    public class TechnicianRepositoryUnitTest : RepositoryTestBase<Technician>
+    {  
+        public TechnicianRepositoryUnitTest() : base(new TechnicianRepository())
+        {
+           
+        }
+
+        protected override ICollection<Technician> GetInsertParameters()
+        {
+            return new List<Technician>
+            {
+                new Technician() { Address = "New-York" },
+            };
+        }
+
+
+
+
 
     }
 }

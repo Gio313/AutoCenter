@@ -1,14 +1,43 @@
+using AutoCenter.Repository;
 using System;
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using AutoCenter.Domain.Interfaces.Repositories;
+using System.Collections.Generic;
 
 namespace AutoCenter.Test
 {
-    public abstract class RepositoryTestBase
+    [TestClass]
+    public abstract class RepositoryTestBase<TEntity> : TestBase 
+    where TEntity : class
     {
-        [Fact]
-        public void Test1()
-        {
+        protected IRepositoryBase<TEntity> _repository;
 
+        public RepositoryTestBase(IRepositoryBase<TEntity> repository)
+        {
+            _repository = repository;    
+        }
+
+        protected abstract ICollection<TEntity> GetInsertParameters();
+
+
+        [TestMethod]
+        public virtual void Create_CallMethod()
+        {
+            foreach (var item in GetInsertParameters())
+            {
+                bool expected = true;
+                Assert.AreEqual(expected, _repository.Create(item), "Is not working!");
+            }
+        }
+
+        [TestMethod]
+        public virtual void Update_CallMethod()
+        {
+            foreach (var item in GetInsertParameters())
+            {
+                bool expected = true;
+                Assert.AreEqual(expected, _repository.Update(item), "Is not working!");
+            }
         }
     }
 }
