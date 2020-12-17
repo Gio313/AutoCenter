@@ -16,7 +16,7 @@ namespace AutoCenter.Domain.Models
         public int AdministrationEmployeeID { get; set; }
 
         [Column(TypeName = "datetime"), Required]
-        public DateTime OrderDate { get; set; }
+        public DateTime? OrderDate { get; set; }
 
         public int OrderStatusID { get; set; }
 

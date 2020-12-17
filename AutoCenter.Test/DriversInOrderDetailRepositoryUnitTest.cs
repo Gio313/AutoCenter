@@ -14,5 +14,13 @@ namespace AutoCenter.Test
         {
 
         }
+
+        protected override ICollection<DriversInOrderDetail> GetInsertParameters()
+        {
+            return new List<DriversInOrderDetail>
+            {
+                new DriversInOrderDetail() { },
+            };
+        }
     }
 }

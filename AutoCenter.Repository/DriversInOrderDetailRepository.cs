@@ -8,8 +8,8 @@ namespace AutoCenter.Repository
 {
     public class DriversInOrderDetailRepository : RepositoryBase<DriversInOrderDetail>
     {
-        public override bool Update(DriversInOrderDetail entity) => throw new NotSupportedException("DriversInOrderDetailRepository has not update method!");
+        public override void Update(DriversInOrderDetail entity) => throw new NotSupportedException("DriversInOrderDetailRepository has not update method!");
 
-        public override bool Delete(int id) => throw new NotImplementedException("DriversInOrderDetailRepository has not delete method!");
+        public override void Delete(int id) => throw new NotImplementedException("DriversInOrderDetailRepository has not delete method!");
     }
 }

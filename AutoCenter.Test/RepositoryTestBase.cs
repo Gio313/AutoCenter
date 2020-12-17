@@ -26,18 +26,21 @@ namespace AutoCenter.Test
             foreach (var item in GetInsertParameters())
             {
                 bool expected = true;
-                Assert.AreEqual(expected, _repository.Create(item), "Is not working!");
+                _repository.Create(item);
+                Assert.AreEqual(expected, _repository.Save(), "Is not working!");
             }
         }
-
+        /*
         [TestMethod]
         public virtual void Update_CallMethod()
         {
             foreach (var item in GetInsertParameters())
             {
                 bool expected = true;
-                Assert.AreEqual(expected, _repository.Update(item), "Is not working!");
+                _repository.Update(item);
+                Assert.AreEqual(expected, _repository.Save(), "Is not working!");
             }
         }
+        */
     }
 }

@@ -13,7 +13,7 @@ namespace AutoCenter.Domain.Models
         [MaxLength(30), Required]
         public string StatusName { get; set; }
 
-        public bool IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }
 
         public ICollection<Order> Orders { get; set; }
     }

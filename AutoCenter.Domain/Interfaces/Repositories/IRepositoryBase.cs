@@ -14,9 +14,9 @@ namespace AutoCenter.Domain.Interfaces.Repositories
         IEnumerable<TEntity> FindAll();
         ICollection<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
         TEntity FindById(params object[] id);
-        bool Create(TEntity entity);
-        bool Update(TEntity entity);
-        bool Delete(int id);
+        void Create(TEntity entity);
+        void Update(TEntity entity);
+        void Delete(int id);
         bool Save();
     }
 }

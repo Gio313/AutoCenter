@@ -40,9 +40,9 @@ namespace AutoCenter.Domain.Models
         public string Email { get; set; }
 
         [Column(TypeName = "datetime")]
-        public DateTime RecordDate { get; set; }
+        public DateTime? RecordDate { get; set; }
 
-        public bool IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }
 
         public ICollection<Order> Orders { get; set; }
     }

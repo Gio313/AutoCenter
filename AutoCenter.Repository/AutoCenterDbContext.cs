@@ -19,7 +19,7 @@ namespace AutoCenter.Repository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.\sqlexpress;Initial Catalog=AutoCenter2020;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=WIN-LK0KT4GASTN\SQLEXPRESS;Initial Catalog=AutoCenter2020;Integrated Security=True");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

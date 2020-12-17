@@ -14,5 +14,13 @@ namespace AutoCenter.Test
         {
 
         }
+
+        protected override ICollection<Customer> GetInsertParameters()
+        {
+            return new List<Customer>
+            {
+                new Customer() { },
+            };
+        }
     }
 }

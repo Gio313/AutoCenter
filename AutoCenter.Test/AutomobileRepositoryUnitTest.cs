@@ -14,5 +14,13 @@ namespace AutoCenter.Test
         {
 
         }
+
+        protected override ICollection<Automobile> GetInsertParameters()
+        {
+            return new List<Automobile>
+            {
+                new Automobile() { },
+            };
+        }
     }
 }

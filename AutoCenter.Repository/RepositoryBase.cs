@@ -20,25 +20,22 @@ namespace AutoCenter.Repository
             _dbSet = _db.Set<TEntity>();
         }
 
-        public virtual bool Create(TEntity entity)
+        public virtual void Create(TEntity entity)
         {
             CheckEntityNotNull(entity);
             _dbSet.Add(entity);
-            return Save();  
         }
 
-        public virtual bool Delete(int id)
+        public virtual void Delete(int id)
         {
             TEntity entity = _dbSet.Find(id);
             _dbSet.Remove(entity);
-            return Save();
         }
 
-        public virtual bool Update(TEntity entity)
+        public virtual void Update(TEntity entity)
         {
             CheckEntityNotNull(entity);
             _dbSet.Update(entity);
-            return Save();
         }
 
         public virtual void CheckEntityNotNull(TEntity entity)

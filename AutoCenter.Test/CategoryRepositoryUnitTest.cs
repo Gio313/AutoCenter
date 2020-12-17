@@ -10,11 +10,18 @@ using Xunit;
 
 namespace AutoCenter.Test
 {
-    public class CategoryRepositoryUnitTest : RepositoryBase<Category>
+    public class CategoryRepositoryUnitTest : RepositoryTestBase<Category>
     {
         public CategoryRepositoryUnitTest() : base(new CategoryRepository())
         {
 
+        }
+        protected override ICollection<Category> GetInsertParameters()
+        {
+            return new List<Category>
+            {
+                new Category() { },
+            };
         }
     }
 }

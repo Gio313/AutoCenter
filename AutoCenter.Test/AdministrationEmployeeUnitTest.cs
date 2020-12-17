@@ -14,5 +14,13 @@ namespace AutoCenter.Test
         {
                 
         }
+
+        protected override ICollection<AdministrationEmployee> GetInsertParameters()
+        {
+            return new List<AdministrationEmployee>
+            {
+                new AdministrationEmployee() { },
+            };
+        }
     }
 }

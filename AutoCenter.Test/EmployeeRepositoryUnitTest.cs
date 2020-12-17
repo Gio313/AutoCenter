@@ -15,5 +15,13 @@ namespace AutoCenter.Test
 
         }
 
+        protected override ICollection<Employee> GetInsertParameters()
+        {
+            return new List<Employee>
+            {
+                new Employee() { },
+            };
+        }
+
     }
 }

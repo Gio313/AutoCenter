@@ -31,8 +31,8 @@ namespace AutoCenter.Domain.Models
         public string Email { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime HireDate { get; set; }
+        public DateTime? HireDate { get; set; }
 
-        public bool IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }
     }
 }

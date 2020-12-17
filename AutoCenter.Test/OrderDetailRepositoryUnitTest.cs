@@ -14,5 +14,13 @@ namespace AutoCenter.Test
         {
 
         }
+
+        protected override ICollection<OrderDetail> GetInsertParameters()
+        {
+            return new List<OrderDetail>
+            {
+                new OrderDetail() { },
+            };
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace AutoCenter.Test
         {
             return new List<Technician>
             {
-                new Technician() { Address = "New-York" },
+                new Technician() { FirstName = "Gio", LastName = "Zviadauri", PersonalNumber = "0205050303"}
             };
         }
 
