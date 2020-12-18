@@ -50,7 +50,11 @@ namespace AutoCenter.Repository
 
         public virtual TEntity FindById(params object[] id) => _dbSet.Find(id);
 
-        public virtual bool Save() => _db.SaveChanges() > 0;
+        public virtual int Save()
+        {
+            int value = _db.SaveChanges();
+            return  value;
+        }
 
         public virtual ICollection<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {

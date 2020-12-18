@@ -1,5 +1,6 @@
 ﻿using AutoCenter.Domain.Models;
 using AutoCenter.Repository;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace AutoCenter.Test
 {
+    [TestClass]
     public class OrderStatusRepositoryUnitTest : RepositoryTestBase<OrderStatus>
     {
         public OrderStatusRepositoryUnitTest() : base(new OrderStatusRepository())
@@ -19,7 +21,7 @@ namespace AutoCenter.Test
         {
             return new List<OrderStatus>
             {
-                new OrderStatus() { },
+                new OrderStatus() {StatusName = "gadazidulia" }
             };
         }
     }

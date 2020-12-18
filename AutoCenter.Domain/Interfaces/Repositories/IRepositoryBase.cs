@@ -17,6 +17,6 @@ namespace AutoCenter.Domain.Interfaces.Repositories
         void Create(TEntity entity);
         void Update(TEntity entity);
         void Delete(int id);
-        bool Save();
+        int Save();
     }
 }

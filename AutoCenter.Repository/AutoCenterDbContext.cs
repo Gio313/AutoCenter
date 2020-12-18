@@ -19,7 +19,7 @@ namespace AutoCenter.Repository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=WIN-LK0KT4GASTN\SQLEXPRESS;Initial Catalog=AutoCenter2020;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=WIN-LK0KT4GASTN\SQLEXPRESS;Initial Catalog=AutoCenter2021;Integrated Security=True");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +35,7 @@ namespace AutoCenter.Repository
             modelBuilder.Entity<OrderStatus>().ToTable("OrderStatuses").Property(x => x.IsDeleted).HasDefaultValue(false);
             modelBuilder.Entity<Customer>().Property(x => x.RecordDate).HasDefaultValueSql("getdate()");
             modelBuilder.Entity<Automobile>().Property(x => x.RecordDate).HasDefaultValueSql("getdate()");
+            modelBuilder.Entity<Order>().Property(x => x.OrderDate).HasDefaultValueSql("getdate()");
         }
     }
 }

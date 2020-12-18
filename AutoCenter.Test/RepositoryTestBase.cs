@@ -25,9 +25,10 @@ namespace AutoCenter.Test
         {
             foreach (var item in GetInsertParameters())
             {
-                bool expected = true;
+                int expected = 1;
                 _repository.Create(item);
-                Assert.AreEqual(expected, _repository.Save(), "Is not working!");
+                int ex = _repository.Save();
+                Assert.AreEqual(expected, ex, "Is not working!");
             }
         }
         /*

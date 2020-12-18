@@ -15,7 +15,7 @@ namespace AutoCenter.Domain.Models
 
         public string Description { get; set; }
 
-        public bool IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }
 
         public  ICollection<Technician> Technicians { get; set; }
 
